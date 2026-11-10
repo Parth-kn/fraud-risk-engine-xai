@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fraud-risk-engine-xai"
+version = "0.1.0"
+description = "Real-time behavioral credit card fraud risk scoring engine using XGBoost, SHAP Explainable AI, and Gradio."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pandas>=2.2.0",
+    "numpy>=1.26.0",
+    "scikit-learn>=1.4.0",
+    "xgboost>=2.0.0",
+    "shap>=0.45.0",
+    "gradio>=4.40.0",
+    "matplotlib>=3.8.0",
+    "seaborn>=0.13.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
